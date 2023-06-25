@@ -1,0 +1,39 @@
+<nav>
+  <div class="text-start columns-12 flex py-5 justify-center bg-green-700">
+    <div class="container text-white flex align-middle">
+      <a href="" id="logo" class="mt-5 mx-12">
+        <img src="../assets/images/ball.png" alt="" />
+      </a>
+      <a id="navitem" href="" class="mx-5 py-5 text-lg">Football</a>
+      <a id="navitem" href="" class="mx-5 py-5 text-lg">Basketball</a>
+      <a id="navitem" href="" class="mx-5 py-5 text-lg">Rugby</a>
+      <div class="vl mx-4"></div>
+      <a (click)="showStandings($event)" id="navitem" href="" class="mx-5 py-5 text-lg">Standings</a>
+    </div>
+  </div>
+</nav>
+
+<div class="flex">
+  <div class="w-1/6">
+    <!-- First Column (width: 1/4) -->
+    <div class="bg-indigo-50 p-4 text-start">
+      <app-countries></app-countries>
+    </div>
+  </div>
+  <div class="flex-grow">
+    <!-- Second Column (width: 1/2) -->
+    <div class="bg-green-50 p-4 text-center">
+      <!-- GAMES TEMPLATE -->
+        <app-games *ngIf="!standings"></app-games>
+        <app-standings *ngIf="standings"></app-standings>
+        <!-- <custom-leagues *ngIf="leagueComponent.customLeague && standings"></custom-leagues> -->
+      <!--  -->
+    </div>
+  </div>
+  <div class="w-1/6">
+    <!-- Third Column (width: 1/4) -->
+    <div class="bg-indigo-50 p-4 text-end">
+      <app-leagues></app-leagues>
+    </div>
+  </div>
+</div>

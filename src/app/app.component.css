@@ -1,0 +1,14 @@
+#logo img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.vl{
+  border-left: 2px solid white;
+  height: inherit
+}
+
+a#navitem:hover{
+  text-decoration: underline;
+  transition: 012s ease-in;
+}
